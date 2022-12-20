@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 500px;
+    height: 200px;
+    border: 2px dotted black;
+    position: relative;
+}
+
+.dinozavr {
+    background-image: url('./img/dinozavr.png');
+    width: 80px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+}
+
+.block {
+    background-image: url('./img/daraxt.png');
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: block 2s infinite linear;
+}
+
+@keyframes block {
+    from {
+        right: 0;
+    }
+    to {
+        right: 500px;
+    }
+}
+
+@keyframes dinozavr {
+    0% {
+        bottom: 0;
+    }
+    30% {
+        bottom: 50px;
+    }
+    70% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+.jump {
+    animation: dinozavr 1s infinite linear;
+}
